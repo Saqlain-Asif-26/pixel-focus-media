@@ -1,0 +1,63 @@
+:root {
+  font-family: "Zalando Sans Expanded", "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.5;
+  cursor: default;
+
+  color-scheme: dark light;
+  --bg-primary: #121212;
+  --text-primary: #ffffff;
+  --text-gray: #5C5A5A;
+  --dot-color: #000;
+  --border-color: #000;
+  --section-bg-gradient: linear-gradient(to right, #73B492, #35E6CC);
+}
+
+/* New variables (safe append) */
+:root {
+  --theme-primary: #73B492;
+  --theme-secondary: #35E6CC;
+}
+
+.text-gray {
+  color: var(--text-gray);
+}
+
+[data-theme="dark"] {
+  --dot-color: #fff;
+  --border-color: #fff;
+}
+
+body {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.5s ease;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+[data-theme="light"] {
+  --bg-primary: #e0e0e0;
+  --text-primary: #121212;
+}
+
+/* ✅ Hide scrollbars safely without breaking layout */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ✅ Optional: Hide main scrollbar visuals but keep scrolling working */
+html::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
