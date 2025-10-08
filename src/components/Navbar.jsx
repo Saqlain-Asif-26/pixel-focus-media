@@ -110,17 +110,27 @@ function Navbar() {
       {item}
     </span>
 
-    {/* Curved Underline */}
-    <svg
-      className="absolute left-0 -bottom-14 w-full h-[60px]"
-      viewBox="0 0 10 10"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0,5 C4,1 6,2 10,2"
-        className="stroke-[0.8] stroke-[#35E6CC] fill-none transition-all duration-500 ease-out scale-x-0 origin-left group-hover:scale-x-100"
-      ></path>
-    </svg>
+{/* Curved Underline */}
+<svg
+  className="absolute left-0 -bottom-14 w-full h-[60px]"
+  viewBox="0 0 10 10"
+  preserveAspectRatio="none"
+>
+  <defs>
+    <linearGradient id="strokeGradient" x1="0" y1="1" x2="1" y2="1">
+      <stop offset="0%" stopColor="#73B492" />
+      <stop offset="100%" stopColor="#35E6CC" />
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M0,5 C4,1 6,2 10,2"
+    className="fill-none transition-all duration-500 ease-out scale-x-0 origin-left group-hover:scale-x-100"
+    stroke="url(#strokeGradient)"
+    strokeWidth="0.8"
+  ></path>
+</svg>
+
   </a>
 ))}
 
