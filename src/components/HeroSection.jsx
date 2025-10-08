@@ -43,8 +43,8 @@ function HeroSection() {
           className="w-xs sm:w-sm"
           src={
             theme === "dark"
-            ? "/assets/whiteGlowingLogo.png"
-            : "/assets/darkGlowingLogo.png"
+            ? "/pixel-focus-media/assets/whiteGlowingLogo.png"
+            : "/pixel-focus-media/assets/darkGlowingLogo.png"
           }
           alt="Glowing Logo"
         />
