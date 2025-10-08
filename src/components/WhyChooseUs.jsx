@@ -18,22 +18,22 @@ const WhyChooseUs = () => {
 
   const features = [
     {
-      img: "src/assets/strategyIcon.png",
+      img: "./assets/strategyIcon.png",
       title: "Tailored Strategies",
       desc: "We create bespoke marketing strategies that align perfectly with your business goals.",
     },
     {
-      img: "src/assets/teamIcon.png",
+      img: "./assets/teamIcon.png",
       title: "Expert Team",
       desc: "Our team of experienced professionals is dedicated to delivering exceptional results.",
     },
     {
-      img: "src/assets/globalPartner.png",
+      img: "./assets/globalPartner.png",
       title: "Long-term Partnerships",
       desc: "We believe in building lasting relationships with our clients.",
     },
     {
-      img: "src/assets/scalableIcon.png",
+      img: "./assets/scalableIcon.png",
       title: "Scalable Services",
       desc: "Our services are designed to grow with your business.",
     },

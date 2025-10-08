@@ -18,7 +18,7 @@ const MissionSection = () => {
         {/* Left Image */}
         <div className="relative w-full md:w-1/2 h-80 sm:h-96 md:h-[460px] md:order-1 order-2">
           <img
-            src="src/assets/groupPic.png"
+            src="./assets/groupPic.png"
             alt="Team working on project"
             className="w-full h-full object-cover"
           />

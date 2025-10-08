@@ -21,7 +21,7 @@ function Navbar() {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <img className="h-14" src="src/assets/logo.png" alt="logo" />
+          <img className="h-14" src="./assets/logo.png" alt="logo" />
           <h3 className="text-xl montserrat font-bold tracking-wider text-[#5C5A5A]">
             PIXEL <span className="block sm:inline text-[#689A83]">FOCUS</span>{" "}
             MEDIA
@@ -57,7 +57,7 @@ function Navbar() {
     <div className="flex justify-between items-center">
       {/* Logo */}
       <div className="flex items-center gap-3">
-        <img className="h-14" src="src/assets/logo.png" alt="logo" />
+        <img className="h-14" src="./assets/logo.png" alt="logo" />
         <h3 className="text-xl montserrat font-bold tracking-wider text-[#5C5A5A]">
             PIXEL <span className="block sm:inline text-[#689A83]">FOCUS</span>{" "}
             MEDIA
