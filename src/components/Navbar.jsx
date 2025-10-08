@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -81,41 +82,48 @@ function Navbar() {
 
     {/* Links center (responsive) */}
 <div className="flex flex-col items-end justify-start my-8 md:my-[56px] md:justify-center gap-6 sm:gap-8 md:gap-16 flex-1">
-  {[
-    "Home",
-    "Behind The Pixels",
-    "Branding",
-    "Social Media Marketing",
-    "SEO",
-    "SEM",
-    "Contact Us",
-  ].map((item) => (
-    <a
-  key={item}
-  href="#"
-  className="relative group 
-             text-xl sm:text-3xl md:text-5xl lg:text-8xl 
-             px-2 sm:px-0 
-             mx-1 sm:mx-0"
->
-  {/* Text */}
-  <span
-    className="
-      bg-gradient-to-b from-[#131313] to-[#2F2F2F] 
-      bg-clip-text text-transparent
-      transition-all duration-500 
-      group-hover:bg-gradient-to-r group-hover:from-[#73B492] group-hover:to-[#35E6CC] ">{item}</span>
+{[
+  "Home",
+  "Behind The Pixels",
+  "Branding",
+  "Social Media Marketing",
+  "SEO",
+  "SEM",
+  "Contact Us",
+].map((item) => (
+  <a
+    key={item}
+    href="#"
+    className="relative group 
+               text-xl sm:text-3xl md:text-5xl lg:text-8xl 
+               px-2 sm:px-0 
+               mx-1 sm:mx-0"
+  >
+    {/* Text */}
+    <span
+      className="
+        bg-gradient-to-b from-[#131313] to-[#2F2F2F] 
+        bg-clip-text text-transparent
+        transition-all duration-500 
+        group-hover:bg-gradient-to-r group-hover:from-[#73B492] group-hover:to-[#35E6CC]"
+    >
+      {item}
+    </span>
 
-  {/* Underline */}
-  <span
-    className="absolute left-0 -bottom-1 h-[3px] w-0 
-               bg-gradient-to-r from-[#73B492] to-[#35E6CC] 
-               transition-all duration-500 
-               group-hover:w-full"
-  />
-</a>
+    {/* Curved Underline */}
+    <svg
+      className="absolute left-0 -bottom-14 w-full h-[60px]"
+      viewBox="0 0 10 10"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0,5 C4,1 6,2 10,2"
+        className="stroke-[0.8] stroke-[#35E6CC] fill-none transition-all duration-500 ease-out scale-x-0 origin-left group-hover:scale-x-100"
+      ></path>
+    </svg>
+  </a>
+))}
 
-  ))}
 </div>
 
 
