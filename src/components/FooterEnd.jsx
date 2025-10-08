@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const FooterEnd = () => {
   const [theme, setTheme] = useState(
@@ -17,10 +18,10 @@ const FooterEnd = () => {
   }, []);
 
   return (
-    <section
+    <motion.section
       className={`relative w-full px-6 sm:px-16 lg:px-24 py-8 ${
         theme === "light" ? "text-black" : "bg-[var(--bg-primary)] text-gray-300"
-      }`}
+      }`} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true }}
     >
       <div className="max-w-7xl mx-auto flex flex-col items-center space-y-6 w-full">
         {/* Top Line */}
@@ -68,7 +69,7 @@ const FooterEnd = () => {
           ©2024 PIXEL FOCUS MEDIA. ALL RIGHTS RESERVED
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -18,7 +18,7 @@ function Navbar() {
   }, [theme]);
 
   return (
-    <div className="mx-8 sm:mx-16 md:mx-22 my-8 z-9999">
+    <motion.div className="mx-8 sm:mx-16 md:mx-22 my-8 z-9999" >
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
@@ -140,7 +140,7 @@ function Navbar() {
   </div>
 </div>
 
-    </div>
+    </motion.div>
   );
 }
 

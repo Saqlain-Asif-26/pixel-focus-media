@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import GradientButton from "./GradientButton";
 
 
@@ -19,7 +20,7 @@ const [theme, setTheme] = useState(document.documentElement.getAttribute("data-t
     
 
     {/* left Content */}
-    <div className="w-full md:w-1/2 space-y-6">
+    <motion.div className="w-full md:w-1/2 space-y-6" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true }}>
       <div className="inline-block relative px-6 py-1.5 rounded-full text-sm font-medium text-white">
         <span className="absolute inset-0 rounded-full p-[1px] bg-gradient-to-r from-[#73B492] to-[#35E6CC]"></span>
         <span className="absolute inset-0.5 rounded-full bg-[var(--bg-primary)]"></span>
@@ -34,7 +35,7 @@ const [theme, setTheme] = useState(document.documentElement.getAttribute("data-t
         Your brand defines how the market perceives you and is invaluable. We understand its importance and are honoured to help it grow. Our collaborative approach ensures we are aligned with your vision before moving forward to elevate your brand to its fullest potential.
       </p>
       <GradientButton text="Learn More" theme={theme} />
-    </div>
+    </motion.div>
       {/* right Image */}
     <div className="relative w-full md:w-1/2 h-80 sm:96 md:h-[460px]">
       <img

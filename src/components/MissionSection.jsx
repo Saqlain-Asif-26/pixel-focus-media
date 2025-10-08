@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import GradientButton from "./GradientButton";
 
 const MissionSection = () => {
@@ -13,7 +14,7 @@ const MissionSection = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[var(--bg-primary)] text-[var(--text-primary)] pb-20 md:pb-30 px-6 sm:px-16 lg:px-24">
+    <motion.section className="w-full bg-[var(--bg-primary)] text-[var(--text-primary)] pb-20 md:pb-30 px-6 sm:px-16 lg:px-24" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true }}>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Left Image */}
         <div className="relative w-full md:w-1/2 h-80 sm:h-96 md:h-[460px] md:order-1 order-2">
@@ -46,7 +47,7 @@ const MissionSection = () => {
           <GradientButton text="Learn More" theme={theme} />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

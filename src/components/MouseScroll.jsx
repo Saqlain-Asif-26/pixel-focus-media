@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
+
 export default function MouseScroll() {
   return (
-    <div className="flex flex-col items-center my-20">
+    <motion.div className="flex flex-col items-center my-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true }}>
       {/* Heading */}
       <h2 className="text-[var(--text-primary)] text-lg md:text-3xl mb-6 text-center">
         Delivering Results Through Digital Marketing
@@ -26,6 +28,6 @@ export default function MouseScroll() {
       <p className="text-[var(--text-secondary)] text-xs mt-4">
         Scroll Down
       </p>
-    </div>
+    </motion.div>
   );
 }

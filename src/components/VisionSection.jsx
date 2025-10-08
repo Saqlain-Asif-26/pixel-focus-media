@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import GradientButton from "./GradientButton";
 
 export default function VisionSection() {
@@ -13,7 +14,7 @@ export default function VisionSection() {
   }, []);
 
   return (
-    <section className="w-full p-6 pb-20 md:py-40 relative overflow-hidden">
+    <motion.section className="w-full p-6 pb-20 md:py-40 relative overflow-hidden" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true }}>
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div
           className="w-[100%] h-[30%] rounded-full blur-[90px] opacity-25"
@@ -30,6 +31,6 @@ export default function VisionSection() {
             <GradientButton text="Learn More" theme={theme} />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

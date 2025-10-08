@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import GradientButton from "./GradientButton";
 
 const CoreServicesSection = () => {
@@ -45,7 +46,7 @@ const CoreServicesSection = () => {
   ];
 
   return (
-    <section className="w-full bg-[var(--bg-primary)] text-[var(--text-primary)] pb-20 md:py-24 px-6 sm:px-16 lg:px-24">
+    <motion.section className="w-full bg-[var(--bg-primary)] text-[var(--text-primary)] pb-20 md:py-24 px-6 sm:px-16 lg:px-24" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true }}>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch gap-12">
         {/* Left Side: Heading + Image */}
         <div className="w-full md:w-1/2 flex flex-col">
@@ -103,7 +104,7 @@ const CoreServicesSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

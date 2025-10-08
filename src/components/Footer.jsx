@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const [theme, setTheme] = useState(
@@ -40,13 +41,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer
+    <motion.footer
       className={`w-full px-6 sm:px-16 lg:px-24 py-16 ${
         theme === "light"
           ? "text-black"
           : "bg-[var(--bg-primary)] text-gray"
-      }`}
-    >
+      }`} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true }}>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
         {/* Left Side (Logo + Description) */}
         <div className="lg:w-[35%] space-y-4">
@@ -93,7 +93,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

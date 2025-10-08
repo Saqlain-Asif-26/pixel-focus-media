@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
   const [theme, setTheme] = useState(
@@ -40,13 +41,12 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section
+    <motion.section
       className={`relative w-full pb-10 px-6 sm:px-16 lg:px-24 overflow-hidden ${
         theme === "light"
           ? "text-black"
           : "text-white"
-      }`}
-    >
+      }`} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true }}>
       {/* Background Glow */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div
@@ -106,7 +106,7 @@ const WhyChooseUs = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

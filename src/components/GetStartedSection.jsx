@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import GradientButton from "./GradientButton";
 
 const GetStartedSection = () => {
@@ -20,8 +21,8 @@ const GetStartedSection = () => {
   }, []);
 
   return (
-    <section
-      className="relative w-full pb-24 px-6 sm:px-16 lg:px-24 text-center"
+    <motion.section
+      className="relative w-full pb-24 px-6 sm:px-16 lg:px-24 text-center" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true }}
     >
       {/* Content */}
       <div className="relative max-w-4xl mx-auto space-y-8">
@@ -63,7 +64,7 @@ const GetStartedSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
