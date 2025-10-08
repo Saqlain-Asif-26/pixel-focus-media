@@ -54,7 +54,7 @@ const CoreServicesSection = () => {
           </h2>
           <div className="relative w-full h-[460px] flex-1">
             <img
-              src="./assets/coreServices.png"
+              src="/assets/coreServices.png"
               alt="Core services background"
               className="w-full h-full object-cover"
             />

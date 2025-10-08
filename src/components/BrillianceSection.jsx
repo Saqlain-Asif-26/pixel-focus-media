@@ -38,7 +38,7 @@ const [theme, setTheme] = useState(document.documentElement.getAttribute("data-t
       {/* right Image */}
     <div className="relative w-full md:w-1/2 h-80 sm:96 md:h-[460px]">
       <img
-        src="./assets/plantLaptop.png"
+        src="/assets/plantLaptop.png"
         alt="Plant and Laptop"
         className="w-full h-full object-cover"
       />
